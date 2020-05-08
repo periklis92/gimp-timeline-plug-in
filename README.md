@@ -10,8 +10,12 @@
 
 #### Installation:
 ##### Linux:
-<p>Running the make file will build and install 
-</p>
+<p>Running the make file will build and install the plugin using gimptools-2.0.<br>
+Otherwise you can copy the timeline file from the bin folder to your GIMP plugins folder.</p>
+
+##### Windows:
+<p>Same goes here for the Makefile.<br>
+The bin/timeline.exe file is a prebuilt binary compiled for Windows 64 bit.</p>
 
 #### General Instructions:
 <p>
