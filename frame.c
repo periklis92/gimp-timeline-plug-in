@@ -73,6 +73,7 @@ frame_t* frame_remove(gint32 image_ID, frame_t* frame_to_remove, gboolean is_act
     }
     
     timeline.number_of_frames--;
+    g_object_unref(G_OBJECT(temp->eventbox));
     g_free(temp);
     gimp_displays_flush();
     return next;
@@ -101,11 +102,10 @@ gboolean frame_update_thumb(frame_t* frame, gint32 image_width, gint32 image_hei
 {
   if (frame != NULL){
     GtkWidget* preview = frame->thumbnail;
-    GdkPixbuf* pixbuf = gimp_drawable_get_thumbnail(frame->layer_group_id, 
-      image_width, image_height, GIMP_PIXBUF_SMALL_CHECKS);
-    frame->image_buffer = gdk_pixbuf_copy(pixbuf);
-    GdkPixbuf* pixbuf_small = gdk_pixbuf_scale_simple(pixbuf, FRAME_THUMBNAIL_SIZE, FRAME_THUMBNAIL_SIZE, GDK_INTERP_NEAREST);
+    GdkPixbuf* pixbuf_small = gimp_drawable_get_thumbnail(frame->layer_group_id, FRAME_THUMBNAIL_SIZE, FRAME_THUMBNAIL_SIZE,
+          GIMP_PIXBUF_SMALL_CHECKS);
     gtk_image_set_from_pixbuf(GTK_IMAGE(preview), pixbuf_small);
+    g_object_unref(G_OBJECT(pixbuf_small));
   }
   return TRUE;
 }

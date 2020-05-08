@@ -10,7 +10,6 @@ typedef struct frame_str
     GtkWidget* thumbnail;
     GtkWidget* eventbox;
     gint32 index;
-    GdkPixbuf* image_buffer;
     struct frame_str* next_frame;
 }frame_t;
 

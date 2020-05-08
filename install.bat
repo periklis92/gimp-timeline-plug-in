@@ -27,6 +27,7 @@ IF NOT EXIST %def_path% (
     SET /P opt=Would you like to enter the path of your GIMP plug-ins folder? [y/n]: 
     IF "%opt%" == "Y" set TRUE=1
     IF "%opt%" == "y" set TRUE=1
+    
     IF defined TRUE ( 
         GOTO :CHANGE_PATH
     ) ELSE (

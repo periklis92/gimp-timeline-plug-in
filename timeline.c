@@ -309,7 +309,6 @@ void create_spreadsheet()
     frame_t* cur = frame_get_first_frame();
     int i = 0;
     while(cur != NULL){
-      GtkWidget* preview = cur->thumbnail;
       GdkPixbuf* pixbuf = gimp_drawable_get_thumbnail(cur->layer_group_id, 
         image_width, image_height, GIMP_PIXBUF_KEEP_ALPHA);
       gint32 nid = gimp_layer_new_from_pixbuf(new_image_id, "frame", pixbuf, 100, GIMP_LAYER_MODE_NORMAL, 0, 100);
