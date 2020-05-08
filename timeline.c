@@ -244,10 +244,10 @@ static gboolean animation_dialog()
   gtk_widget_set_size_request(framerateEntry, 30, 30);
   gtk_entry_set_max_length(GTK_ENTRY(framerateEntry), 3);
 
-  GtkWidget* ssButton = gtk_button_new_with_label("Create Spreadsheet...");
+  GtkWidget* ssButton = gtk_button_new_with_label("Create Sprite sheet...");
   gtk_box_pack_start(GTK_BOX(topbuttons), ssButton, FALSE, FALSE, 0);
   gtk_widget_show(ssButton);
-  g_signal_connect(ssButton, "pressed", G_CALLBACK(create_spreadsheet), NULL);
+  g_signal_connect(ssButton, "pressed", G_CALLBACK(create_spritesheet), NULL);
 
   spreads_h_axis = gtk_entry_buffer_new("6", 2);
 
@@ -292,7 +292,7 @@ void check_image_is_valid_and_update_size()
   image_height = gimp_image_height(image_ID);
 }
 
-void create_spreadsheet()
+void create_spritesheet()
 {
   int h_axis = 0;
   gboolean is_number = entry_buffer_to_int(spreads_h_axis, &h_axis);

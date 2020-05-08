@@ -12,7 +12,7 @@ static void initialize_frames();
 static void remove_active_frame_cb();
 static void play_animation_cb();
 static void check_image_is_valid_and_update_size();
-static void create_spreadsheet();
+static void create_spritesheet();
 gboolean update_active_frame_thumb_cb();
 static void set_active_frame_cb(GtkWidget* widget, GdkEvent* event, gpointer data);
 static void onion_skin_toggle_cb (GtkToggleButton *toggle_button, gpointer user_data);

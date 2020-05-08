@@ -1,7 +1,7 @@
 #ifndef FRAME_H
 #define FRAME_H 1
 
-#define SPREADSHEET_X 6.0
+#define SPRITESHEET_X 6.0
 #define FRAME_THUMBNAIL_SIZE 60
 
 #include "frame_types.h"
