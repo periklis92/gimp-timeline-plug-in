@@ -244,7 +244,7 @@ static gboolean animation_dialog()
   gtk_widget_set_size_request(framerateEntry, 30, 30);
   gtk_entry_set_max_length(GTK_ENTRY(framerateEntry), 3);
 
-  GtkWidget* ssButton = gtk_button_new_with_label("Create Sprite sheet...");
+  GtkWidget* ssButton = gtk_button_new_with_label("Create Sprite Sheet...");
   gtk_box_pack_start(GTK_BOX(topbuttons), ssButton, FALSE, FALSE, 0);
   gtk_widget_show(ssButton);
   g_signal_connect(ssButton, "pressed", G_CALLBACK(create_spritesheet), NULL);
