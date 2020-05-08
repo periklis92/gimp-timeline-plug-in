@@ -8,6 +8,11 @@
 3.Click on Add Keyframe to add a new keyframe and start drawing. <br>
 </p>
 
+#### Installation:
+##### Linux:
+<p>Running the make file will build and install 
+</p>
+
 #### General Instructions:
 <p>
   
